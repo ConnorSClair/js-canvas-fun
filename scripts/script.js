@@ -25,7 +25,6 @@ function textSubmission() {
 };
 
 function handleImage(e) {
-    // get open file uploader thing
     var context = document.getElementById('canvas').getContext('2d');
     var reader = new FileReader();
     reader.onload = function(event){
@@ -70,7 +69,7 @@ function moving(e) {
             items_on_canvas[i].yLoc = offsetY;
         };
         if (image != null) {
-            context.drawImage(img,xLoc,yLoc);
+            context.drawImage(image,xLoc,yLoc);
         } else {
             context.fillText(text,xLoc,yLoc);
         };
